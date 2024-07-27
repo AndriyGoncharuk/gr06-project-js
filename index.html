@@ -19,11 +19,105 @@
       referrerpolicy="no-referrer"
     />
     <script type="module" crossorigin src="/gr06-project-js/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/gr06-project-js/assets/index-4bcb59b7.css">
+    <link rel="stylesheet" href="/gr06-project-js/assets/index-64c2337e.css">
   </head>
 
   <body>
-    
+    <header class="header">
+  <div class="container header-container">
+    <nav class="header-nav">
+      <a
+        href="./index.html"
+        aria-label="logo-portfolio"
+        class="header-logo-link"
+      >
+        <img
+          class="header-img-logo"
+          src="/gr06-project-js/assets/img-logo-418ff7d9.png"
+          alt="img-logo"
+          height="80"
+        />
+        <svg class="header-text-logo" width="84" height="19">
+          <use href="/gr06-project-js/assets/symbol-defs-09170be1.svg#icon-jefferson_jefferson"></use>
+        </svg>
+      </a>
+      <div class="header-menu">
+        <p class="header-menu-text">Menu</p>
+        <ul class="header-menu-list">
+          <li class="header-nav-item">
+            <a href="#about-me" class="header-nav-link">About me</a>
+          </li>
+          <li class="header-nav-item">
+            <a href="#benefits" class="header-nav-link">Benefits</a>
+          </li>
+          <li class="header-nav-item">
+            <a href="#projects" class="header-nav-link">Projects</a>
+          </li>
+          <li class="header-nav-item">
+            <a href="#faq" class="header-nav-link">FAQ</a>
+          </li>
+        </ul>
+      </div>
+      <a
+        href="#work-together"
+        aria-label="button order"
+        class="header-order-link"
+        ><button class="header-order-btn">Order the project</button></a
+      >
+      <!-- btn mob -->
+      <button
+        class="header-btn-mob"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="mobile menu open"
+      >
+        <svg class="header-btn-mob-icon" width="84" height="19">
+          <use href="/gr06-project-js/assets/symbol-defs-09170be1.svg#icon-jefferson_jefferson"></use>
+        </svg>
+      </button>
+
+      <!-- btn mob -->
+    </nav>
+  </div>
+
+  <!-- modal-menu -->
+
+  <div class="header-backdrop">
+    <div class="header-modal-menu">
+      <button
+        class="header-modal-menu-close"
+        type="button"
+        aria-label="button mobile menu close"
+      >
+        <svg class="header-modal-menu-close-icon" width="100" height="15">
+          <use href="/gr06-project-js/assets/symbol-defs-09170be1.svg#icon-jefferson_jefferson"></use>
+        </svg>
+      </button>
+      <nav class="header-modal-menu-nav">
+        <ul class="header-modal-menu-list">
+          <li class="header-modal-menu-item">
+            <a href="#about-me" class="header-modal-menu-link">About me</a>
+          </li>
+          <li class="header-modal-menu-item">
+            <a href="#benefits" class="header-modal-menu-link">Benefits</a>
+          </li>
+          <li class="header-modal-menu-item">
+            <a href="#projects" class="header-modal-menu-link">Projects</a>
+          </li>
+          <li class="header-modal-menu-item">
+            <a href="#faq" class="header-modal-menu-link">FAQ</a>
+          </li>
+        </ul>
+      </nav>
+      <a
+        href="#work-together"
+        aria-label="button order"
+        class="header-modal-order-link"
+        ><button class="header-modal-order-btn">Order the project</button></a
+      >
+    </div>
+  </div>
+</header>
 
 
     <main>
@@ -37,7 +131,132 @@
       
       
       
-      
+      <section id="FAQ" class="section faq">
+  <div class="faq-container">
+    <h2 class="title-faq" id="faq">FAQ</h2>
+    <ul class="faq-list accordion-container">
+      <li class="faq-item">
+        <div class="questions ac-trigger">
+          <h3 class="title-item-list ac-header">
+            What programming languages ​​are most often used in your project
+          </h3>
+          <button type="button" class="btn-answer">
+            <svg class="icon-answer">
+              <use href="../img/icons.svg#icon-arrow-down"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="ac-panel">
+          <p class="text-item-list ac-text">
+            In the field of web development, there are various technologies and
+            programming languages. Typically, this includes a combination of
+            frontend (client side) and backend (server side) languages.
+          </p>
+        </div>
+      </li>
+      <li class="faq-item">
+        <div class="questions ac-trigger">
+          <h3 class="title-item-list ac-header">
+            What are the deadlines for the project
+          </h3>
+          <button type="button" class="btn-answer">
+            <svg class="icon-answer">
+              <use href="../img/icons.svg#icon-arrow-down"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="ac-panel">
+          <p class="text-item-list ac-text">
+            The terms of project implementation depend to a large extent on a
+            number of factors, such as the scope of the project, its complexity,
+            and the availability of resources. Determining exact deadlines is a
+            difficult task, and it usually occurs during the planning phase of
+            the project.
+          </p>
+        </div>
+      </li>
+      <li class="faq-item">
+        <div class="questions ac-trigger">
+          <h3 class="title-item-list ac-header">
+            What payment methods do you accept?
+          </h3>
+          <button type="button" class="btn-answer">
+            <svg class="icon-answer">
+              <use href="../img/icons.svg#icon-arrow-down"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="ac-panel">
+          <p class="text-item-list ac-text">
+            Payment through credit and debit cards such as Visa, MasterCard,
+            specialized electronic payment systems such as PayPal, as well as
+            payments in cryptocurrencies such as Bitcoin, Ethereum and others.
+          </p>
+        </div>
+      </li>
+      <li class="faq-item">
+        <div class="questions ac-trigger">
+          <h3 class="title-item-list ac-header">How can I contact you</h3>
+          <button type="button" class="btn-answer">
+            <svg class="icon-answer">
+              <use href="../img/icons.svg#icon-arrow-down"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="ac-panel">
+          <p class="text-item-list ac-text">
+            In the field of web development, there are various technologies and
+            programming languages. Typically, this includes a combination of
+            frontend (client side) and backend (server side) languages.
+          </p>
+        </div>
+      </li>
+      <li class="faq-item">
+        <div class="questions ac-trigger">
+          <h3 class="title-item-list ac-header">
+            Do you provide advice or support
+          </h3>
+          <button type="button" class="btn-answer">
+            <svg class="icon-answer">
+              <use href="../img/icons.svg#icon-arrow-down"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="ac-panel">
+          <p class="text-item-list ac-text">
+            The terms of project implementation depend to a large extent on a
+            number of factors, such as the scope of the project, its complexity,
+            and the availability of resources. Determining exact deadlines is a
+            difficult task, and it usually occurs during the planning phase of
+            the project.
+          </p>
+        </div>
+      </li>
+      <li class="faq-item">
+        <div class="questions ac-trigger">
+          <h3 class="title-item-list ac-header">
+            What does the process of developing a software product look like
+            from idea to implementation
+          </h3>
+          <button type="button" class="btn-answer">
+            <svg class="icon-answer">
+              <use href="../img/icons.svg#icon-arrow-down"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="ac-panel">
+          <p class="text-item-list ac-text">
+            Payment through credit and debit cards such as Visa, MasterCard,
+            specialized electronic payment systems such as PayPal, as well as
+            payments in cryptocurrencies such as Bitcoin, Ethereum and others.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<!-- <script type="module" src="../js/faq.js"></script> -->
+
       
       
       
