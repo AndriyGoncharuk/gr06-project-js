@@ -52,6 +52,13 @@ button {
   display: flex;
 }
 
+.header-btn-mob-icon {
+  transition: transform 0.4s ease;
+}
+.header-btn-mob-icon:hover {
+  transform: scale(1.2);
+}
+
 @media screen and (min-width: 768px) {
   .header-menu-text {
     font-weight: 500;
@@ -156,6 +163,13 @@ button {
   top: 20px;
 
   padding: 0;
+}
+
+.header-modal-menu-close-icon {
+  transition: transform 0.4s ease;
+}
+.header-modal-menu-close-icon:hover {
+  transform: scale(1.2);
 }
 
 .header-modal-menu {
