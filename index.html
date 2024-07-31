@@ -22,7 +22,7 @@
     <script type="module" crossorigin src="/gr06-project-js/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/gr06-project-js/assets/vendor-33170e51.js">
     <link rel="stylesheet" href="/gr06-project-js/assets/vendor-8ea06785.css">
-    <link rel="stylesheet" href="/gr06-project-js/assets/index-78424b39.css">
+    <link rel="stylesheet" href="/gr06-project-js/assets/index-7b0ed9ae.css">
   </head>
 
   <body>
@@ -954,16 +954,40 @@
     <address class="footer-bottom">
       <ul class="contacts">
         <li class="contacts-item contacts-mail">
-          <a class="contacts-link" href="mailto:lloydjefferson@gmail.com"
+          <a
+            class="contacts-link"
+            href="mailto:lloydjefferson@gmail.com"
+            rel="noopener
+            noreferrer"
             >lloydjefferson@gmail.com</a
           >
         </li>
         <li class="contacts-item contacts-phone">
-          <a class="contacts-link" href="tel:+3801111111111"
+          <a
+            class="contacts-link"
+            href="tel:+3801111111111"
+            rel="noopener
+            noreferrer"
             >+380 11 1111 11 11</a
           >
         </li>
       </ul>
+      <!-- <script>
+        document.querySelectorAll('a').forEach(link => {
+          link.innerHTML = link.innerText
+            .split('')
+            .map((letters, idx) => {
+              if (letters === ' ') {
+                return ' ';
+              } else {
+                return `<span style="transition-delay:${
+                  idx * 25
+                }ms">${letters}</span>`;
+              }
+            })
+            .join('');
+        });
+      </script> -->
     </address>
   </div>
 </footer>
