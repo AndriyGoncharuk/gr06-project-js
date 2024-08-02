@@ -104,6 +104,7 @@
     }
 
     .hero-title {
+        
         font: 500 90px / 1 'Inter Tight', sans-serif;
     }
 
@@ -116,8 +117,11 @@
 @media screen and (min-width: 1440px) {
     .hero {
         height: 900px;
-        padding-left: 178px;
         background-image: url('../img/hero/desktop-hero.png');
+    }
+
+    .hero-title {
+        margin-left: 146px;
     }
 
     @media screen and (min-resolution: 192dpi) and (min-width: 1440px) {

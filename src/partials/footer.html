@@ -1,16 +1,7 @@
-<footer class="footer glass-bg" id="work-together">
-
-<footer class="footer" data-aos="fade-right" id="work-together">
-
+<footer class="footer glass-bg" data-aos="fade-right" id="work-together">
   <div class="container footer-container">
     <div class="footer-top">
-      <img
-        class="header-img-logo"
-        src="./img/header/img-logo.png"
-        alt="img-logo"
-        height="80"
-      />
-
+      <img class="header-img-logo" src="./img/header/img-logo.png" alt="img-logo" height="80" />
       <!-- <img
         class="footer-image"
         srcset="
@@ -21,100 +12,46 @@
         alt="Djefferson Photo"
         loading="lazy"
       /> -->
-
       <h2 class="footer-title">Let's <span class="title-accent">work</span></h2>
       <h2 class="footer-title">together</h2>
     </div>
     <form class="footer-form">
       <div class="input-wrapper">
-        <input
-          class="footer-form-input"
-          id="user-email"
-          type="email"
-          name="e-mail"
-          placeholder="clients@gmail.com"
-          autocomplete="off"
-          aria-label="Email"
-          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-        />
+        <input class="footer-form-input" id="user-email" type="email" name="e-mail" placeholder="clients@gmail.com"
+          autocomplete="off" aria-label="Email" pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" />
         <div id="email-mirror" class="input-mirror"></div>
       </div>
       <div class="input-wrapper">
-        <input
-          class="footer-form-input"
-          id="user-comment"
-          type="text"
-          name="comments"
-          placeholder="comments"
-          autocomplete="off"
-          aria-label="Comments"
-        />
+        <input class="footer-form-input" id="user-comment" type="text" name="comments" placeholder="comments"
+          autocomplete="off" aria-label="Comments" />
         <div id="comment-mirror" class="input-mirror"></div>
       </div>
-      <button
-        class="footer-form-btn"
-        id="form-btn"
-        type="submit"
-        aria-label="submit form"
-      >
+      <button class="footer-form-btn" id="form-btn" type="submit" aria-label="submit form">
         Send
       </button>
     </form>
-
     <address class="footer-bottom">
       <ul class="contacts">
         <li class="contacts-item contacts-mail">
-          <a
-            class="contacts-link"
-            href="mailto:lloydjefferson@gmail.com"
-            rel="noopener
-            noreferrer"
-            aria-label="Email Lloyd Jefferson"
-            >lloydjefferson@gmail.com</a
-          >
+          <a class="contacts-link" href="mailto:lloydjefferson@gmail.com" rel="noopener
+            noreferrer" aria-label="Email Lloyd Jefferson">lloydjefferson@gmail.com</a>
         </li>
         <li class="contacts-item contacts-phone">
-          <a
-            class="contacts-link"
-            href="tel:+3801111111111"
-            rel="noopener
-            noreferrer"
-            aria-label="Call Lloyd Jefferson"
-            >+380 11 1111 11 11</a
-          >
+          <a class="contacts-link" href="tel:+3801111111111" rel="noopener
+            noreferrer" aria-label="Call Lloyd Jefferson">+380 11 1111 11 11</a>
         </li>
       </ul>
     </address>
   </div>
 </footer>
-
 <!-- Modal -->
-
 <div class="footer-backdrop">
   <div class="modal">
     <div class="modal-box">
       <button class="close-btn" type="button" aria-label="close modal">
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M18 6L6 18"
-            stroke="#FAFAFA"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M6 6L18 18"
-            stroke="#FAFAFA"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M6 6L18 18" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </button>
       <h3 class="modal-title">Thank you for your interest in cooperation!</h3>
@@ -135,15 +72,12 @@
       parseInt(getComputedStyle(input).borderLeftWidth) +
       parseInt(getComputedStyle(input).borderRightWidth); // Border
     const availableWidth = maxWidth - padding - border; // Доступна ширина для тексту
-
     mirror.style.fontSize = getComputedStyle(input).fontSize;
     mirror.style.fontFamily = getComputedStyle(input).fontFamily;
     mirror.style.padding = getComputedStyle(input).padding;
     mirror.style.border = getComputedStyle(input).border;
-
     let text = input.value;
     let truncatedText = text;
-
     mirror.textContent = text;
     if (mirror.offsetWidth > availableWidth) {
       for (let i = text.length - 1; i >= 0; i--) {
@@ -154,20 +88,16 @@
         }
       }
     }
-
     input.value = truncatedText;
   }
-
   const emailInput = document.getElementById('user-email');
   const emailMirror = document.getElementById('email-mirror');
   emailInput.addEventListener('input', function () {
     truncateText(this, emailMirror);
   });
-
   const commentInput = document.getElementById('user-comment');
   const commentMirror = document.getElementById('comment-mirror');
   commentInput.addEventListener('input', function () {
     truncateText(this, commentMirror);
   });
 </script>
-<!-- <script src="./js/footer.js"></script> -->
