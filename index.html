@@ -23,7 +23,7 @@
     <script type="module" crossorigin src="/gr06-project-js/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/gr06-project-js/assets/vendor-b549daa7.js">
     <link rel="stylesheet" href="/gr06-project-js/assets/vendor-165de23a.css">
-    <link rel="stylesheet" href="/gr06-project-js/assets/index-d68e9543.css">
+    <link rel="stylesheet" href="/gr06-project-js/assets/index-2bf15ca9.css">
   </head>
 
   <body>
@@ -913,6 +913,7 @@
         alt="img-logo"
         height="80"
       />
+
       <!-- <img
         class="footer-image"
         srcset="
@@ -923,29 +924,72 @@
         alt="Djefferson Photo"
         loading="lazy"
       /> -->
+
       <h2 class="footer-title">Let's <span class="title-accent">work</span></h2>
       <h2 class="footer-title">together</h2>
     </div>
+    <!-- <form class="footer-form">
+      <div>
+        <input
+          class="footer-form-input"
+          id="user-email"
+          type="email"
+          name="e-mail"
+          placeholder="clients@gmail.com"
+          autocomplete="off"
+          aria-label="Email"
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+        />
+        <span id="email-span"></span>
+      </div>
+      <div>
+        <input
+          class="footer-form-input"
+          id="user-comment"
+          type="text"
+          name="comments"
+          placeholder="comments"
+          autocomplete="off"
+          aria-label="Comments"
+        />
+        <span id="comment-span"></span>
+      </div>
+
+      <button
+        class="footer-form-btn"
+        id="form-btn"
+        type="submit"
+        aria-label="submit form"
+      >
+        Send
+      </button>
+    </form> -->
     <form class="footer-form">
-      <input
-        class="footer-form-input"
-        id="user-email"
-        type="email"
-        name="e-mail"
-        placeholder="clients@gmail.com"
-        pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-        autocomplete="off"
-        aria-label="Email"
-      />
-      <input
-        class="footer-form-input"
-        id="user-comment"
-        type="text"
-        name="comments"
-        placeholder="comments"
-        autocomplete="off"
-        aria-label="Comments"
-      />
+      <div class="input-wrapper">
+        <input
+          class="footer-form-input"
+          id="user-email"
+          type="email"
+          name="e-mail"
+          placeholder="clients@gmail.com"
+          autocomplete="off"
+          aria-label="Email"
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+        />
+        <div id="email-mirror" class="input-mirror"></div>
+      </div>
+      <div class="input-wrapper">
+        <input
+          class="footer-form-input"
+          id="user-comment"
+          type="text"
+          name="comments"
+          placeholder="comments"
+          autocomplete="off"
+          aria-label="Comments"
+        />
+        <div id="comment-mirror" class="input-mirror"></div>
+      </div>
       <button
         class="footer-form-btn"
         id="form-btn"
@@ -955,6 +999,51 @@
         Send
       </button>
     </form>
+    <script>
+      function truncateText(input, mirror) {
+        const maxWidth = input.clientWidth; // Максимальна ширина поля вводу
+        const padding =
+          parseInt(getComputedStyle(input).paddingLeft) +
+          parseInt(getComputedStyle(input).paddingRight); // Padding
+        const border =
+          parseInt(getComputedStyle(input).borderLeftWidth) +
+          parseInt(getComputedStyle(input).borderRightWidth); // Border
+        const availableWidth = maxWidth - padding - border; // Доступна ширина для тексту
+
+        mirror.style.fontSize = getComputedStyle(input).fontSize;
+        mirror.style.fontFamily = getComputedStyle(input).fontFamily;
+        mirror.style.padding = getComputedStyle(input).padding;
+        mirror.style.border = getComputedStyle(input).border;
+
+        let text = input.value;
+        let truncatedText = text;
+
+        mirror.textContent = text;
+        if (mirror.offsetWidth > availableWidth) {
+          for (let i = text.length - 1; i >= 0; i--) {
+            mirror.textContent = text.substring(0, i) + '...';
+            if (mirror.offsetWidth <= availableWidth) {
+              truncatedText = text.substring(0, i) + '...';
+              break;
+            }
+          }
+        }
+
+        input.value = truncatedText;
+      }
+
+      const emailInput = document.getElementById('user-email');
+      const emailMirror = document.getElementById('email-mirror');
+      emailInput.addEventListener('input', function () {
+        truncateText(this, emailMirror);
+      });
+
+      const commentInput = document.getElementById('user-comment');
+      const commentMirror = document.getElementById('comment-mirror');
+      commentInput.addEventListener('input', function () {
+        truncateText(this, commentMirror);
+      });
+    </script>
     <address class="footer-bottom">
       <ul class="contacts">
         <li class="contacts-item contacts-mail">
@@ -978,22 +1067,6 @@
           >
         </li>
       </ul>
-      <!-- <script>
-        document.querySelectorAll('a').forEach(link => {
-          link.innerHTML = link.innerText
-            .split('')
-            .map((letters, idx) => {
-              if (letters === ' ') {
-                return ' ';
-              } else {
-                return `<span style="transition-delay:${
-                  idx * 25
-                }ms">${letters}</span>`;
-              }
-            })
-            .join('');
-        });
-      </script> -->
     </address>
   </div>
 </footer>
